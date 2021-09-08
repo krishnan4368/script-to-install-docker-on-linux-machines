@@ -4,8 +4,8 @@
 # Installing Docker Dependencies
 function installDependencies() {
 echo 'Installing Dependencies'
-sudo apt-get update >> /dev/null 2>$1
-sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release > /dev/null 2>&1
+sudo apt-get update >> /dev/null 2>&1
+sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y >> /dev/null 2>&1
 }
 
 # Configure Docker Repository and install Docker
@@ -17,7 +17,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update >> /dev/null 2>$1
 echo 'Installing Docker Engine'
-sudo apt-get install docker-ce docker-ce-cli containerd.io >> /dev/null 2>&1
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y >> /dev/null 2>&1
 sudo usermod --append --groups docker "$USER" >> /dev/null 2>&1
   }
 
