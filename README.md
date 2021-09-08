@@ -2,4 +2,6 @@
 Bash Script to install Docker on Ubuntu machines.
 
 # Usage
-<code> curl -s https://github.com/krishnan4368/install-docker-on-linux/blob/main/install-docker-on-ubuntu.sh | chmod +x install-docker-on-ubuntu.sh | sh </code>
+```
+curl -O https://raw.githubusercontent.com/krishnan4368/install-docker-on-linux/main/install-docker-on-ubuntu.sh | chmod +x install-docker-on-ubuntu.sh | sh
+```
