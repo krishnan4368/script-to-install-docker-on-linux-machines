@@ -15,7 +15,7 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmo
 echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update >> /dev/null 2>$1
+sudo apt-get update
 echo 'Installing Docker Engine'
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y >> /dev/null 2>&1
 sudo usermod --append --groups docker "$USER" >> /dev/null 2>&1
@@ -25,7 +25,7 @@ sudo usermod --append --groups docker "$USER" >> /dev/null 2>&1
 function enableDockerEngine() {
 echo 'Starting Docker Service'
 sudo systemctl enable docker.service
-sudo systemct restart docker.service
+sudo systemctl restart docker.service
   }
 
 # Install Docker-Compose
