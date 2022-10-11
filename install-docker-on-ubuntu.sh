@@ -31,7 +31,7 @@ sudo systemctl restart docker.service
 # Install Docker-Compose
 function installDockerCompose() {
 echo 'Installing Docker Compose'
-  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >> /dev/null 2>&1
+  sudo curl -L "https://github.com/docker/compose/releases/download/2.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >> /dev/null 2>&1
   sudo chmod +x /usr/local/bin/docker-compose
   sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose 
   echo 'Done, Happy Coding!'
